@@ -4,30 +4,26 @@
   <artifactId>Ncore</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <build>
-    <sourceDirectory>src</sourceDirectory>
     <plugins>
       <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.5.1</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
+        <groupId>org.codehaus.mojo</groupId>
+          <artifactId>appassembler-maven-plugin</artifactId>
+          <version>1.1.1</version>
+          <configuration>
+            <assembleDirectory>target</assembleDirectory>
+            <programs>
+                <program>
+                    <mainClass>Ncore</mainClass>
+                    <name>worker</name>
+                </program>
+            </programs>
+          </configuration>
+          <executions>
+              <execution>
+                  <phase>package</phase><goals><goal>assemble</goal></goals>
+              </execution>
+          </executions>
       </plugin>
-      <plugin>
-      <artifactId>maven-assembly-plugin</artifactId>
-      <configuration>
-        <archive>
-          <manifest>
-            <mainClass>org.duckdns.algoritmus.main.Ncore</mainClass>
-          </manifest>
-        </archive>
-        <descriptorRefs>
-          <descriptorRef>jar-with-dependencies</descriptorRef>
-        </descriptorRefs>
-        <appendAssemblyId>false</appendAssemblyId>
-      </configuration>
-    </plugin>
     </plugins>
   </build>
   <dependencies>
