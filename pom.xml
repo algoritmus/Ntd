@@ -3,6 +3,7 @@
   <groupId>Ncore</groupId>
   <artifactId>Ncore</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+
   <build>
     <plugins>
       <plugin>
@@ -13,7 +14,7 @@
             <assembleDirectory>target</assembleDirectory>
             <programs>
                 <program>
-                    <mainClass>org.duckdns.algoritmus.ncore.main.Ncore</mainClass>
+                    <mainClass>org.duckdns.algoritmus.main.Ncore</mainClass>
                     <name>worker</name>
                 </program>
             </programs>
