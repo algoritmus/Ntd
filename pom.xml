@@ -14,7 +14,7 @@
             <assembleDirectory>target</assembleDirectory>
             <programs>
                 <program>
-                    <mainClass>org.duckdns.algoritmus.main.Ncore</mainClass>
+                    <mainClass>org.duckdns.algoritmus.ncore.main.Ncore</mainClass>
                     <name>worker</name>
                 </program>
             </programs>
